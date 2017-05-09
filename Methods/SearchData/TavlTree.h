@@ -44,10 +44,6 @@ public:
 			p->left = NULL;
 			p->right = NULL;
 			p->height = 0;
-			if (p == NULL)
-			{
-				//cout << "Out of Space\n" << endl;
-			}
 		}
 		else
 		{
@@ -81,10 +77,6 @@ public:
 					}
 				}
 			}
-			else
-			{
-				//cout << "Элемет существует\n" << endl;
-			}
 		}
 		int m, n, d;
 		m = bsheight(p->left);
@@ -97,7 +89,6 @@ public:
 	{
 		if (p == NULL)
 		{
-			//cout << "В дереве нет элементов\n" << endl;
 			return p;
 		}
 		else
@@ -115,7 +106,6 @@ public:
 	{
 		if (p == NULL)
 		{
-			//cout << "В дереве нет элементов\n" << endl;
 			return p;
 		}
 		else
@@ -130,11 +120,7 @@ public:
 
 	void find(TPoint x, nodeptr &p)
 	{
-		if (p == NULL)
-		{
-			//cout << "Простите, но такого элемента нет\n" << endl;
-		}
-		else
+		if (!(p == NULL))
 		{
 			if (x.x < p->element.x)
 			{
@@ -145,10 +131,6 @@ public:
 				if (x.x>p->element.x)
 				{
 					find(x, p->right);
-				}
-				else
-				{
-					//cout << "Элемент, который вы искали есть в дереве!\n" << endl;
 				}
 			}
 		}
