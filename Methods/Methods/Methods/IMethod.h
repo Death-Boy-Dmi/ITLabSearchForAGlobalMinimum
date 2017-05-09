@@ -1,10 +1,6 @@
 #include "../../Function/TFunction.h"
+#include "../../SearchData/TavlTree.h"
 
-struct TPoint
-{
-	double x;
-	double y;
-};
 struct TTask
 {
 	std::string str_function;

@@ -13,16 +13,16 @@ typedef struct TNode *nodeptr;
 //	int maxOfIterations;
 //};
 
-struct TTrial
+struct TPoint
 {
 	double x; //точка на одномерном отрезке
-	double FuncValue; //значение функции
+	double y; //значение функции
 };
 
 
 struct TNode
 {
-	TTrial element; // ключ узла, является x
+	TPoint element; // ключ узла, является x
 	int height; // высота поддерева с корнем в данном узле
 	TNode *left;
 	TNode *right;
@@ -35,7 +35,7 @@ class TavlTree
 {
 
 public:
-	void insert(TTrial x, nodeptr &p)
+	void insert(TPoint x, nodeptr &p)
 	{
 		if (p == NULL)
 		{
@@ -128,7 +128,7 @@ public:
 		}
 	}
 
-	void find(TTrial x, nodeptr &p)
+	void find(TPoint x, nodeptr &p)
 	{
 		if (p == NULL)
 		{

@@ -147,6 +147,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="..\..\Function\TFunction.h" />
+    <ClInclude Include="..\..\SearchData\TavlTree.h" />
     <ClInclude Include="IMethod.h" />
     <ClInclude Include="TMethodOfGlobalSearch.h" />
     <ClInclude Include="TMethodOfPiyavsky.h" />
