@@ -39,23 +39,28 @@ protected:
 		Data.insert(Data.begin() + j, x);
 	}
 
-public:
-
-	TMethodOfPiyavsky(TTask *_pTask/*, TSearchData *_pData*/)
+	virtual void RenewSearchData(double _x)
 	{
-		pTask = _pTask;
-		//pData = _pData;
-		TFunction _func(pTask->str_function);
-		function = _func;
-		M = pTask->r;
+		double _y = f(_x);
+		TPoint tmp;
+		tmp.x = _x; tmp.y = _y;
+		pData->insert(tmp, root);
 	}
-
 	double f(double x)
 	{
-		/*return (x/4)*cos(x);*/
 		return function.Calculate(x);
 	}
 
+public:
+
+	TMethodOfPiyavsky(TTask *_pTask, double _M, TSearchData *_pData)
+	{
+		pTask = _pTask;
+		pData = _pData;
+		TFunction _func(pTask->str_function);
+		function = _func;
+		M = _M;
+	}
 	~TMethodOfPiyavsky() { }
 
 	virtual TPoint CalculateOptimum()
@@ -101,6 +106,7 @@ public:
 			}
 			tempX= getNextPoint(x[tempJ],x[tempJ+1]);
 			insertPointInData(x, tempX);
+			RenewSearchData(tempX);
 			currPoint = makePoint(tempX);
 			updateOptimum(currPoint, result);
 			if (pTask->eps >= gotAccuracy)
