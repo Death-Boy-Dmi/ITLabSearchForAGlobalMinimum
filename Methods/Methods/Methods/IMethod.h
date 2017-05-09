@@ -24,6 +24,7 @@ protected:
 	TTask *pTask;
 	/// ”казатель на матрицу состо€ни€ поиска
 	TSearchData *pData;
+	nodeptr root;
 
 public:
 	IMethod() {	}
