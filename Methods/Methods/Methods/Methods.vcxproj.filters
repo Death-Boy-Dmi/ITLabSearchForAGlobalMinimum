@@ -24,6 +24,9 @@
     <ClInclude Include="TMethodOfGlobalSearch.h">
       <Filter>Заголовочные файлы</Filter>
     </ClInclude>
+    <ClInclude Include="TMethodOfPiyavsky.h">
+      <Filter>Заголовочные файлы</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\Function\TFunction.cpp">
