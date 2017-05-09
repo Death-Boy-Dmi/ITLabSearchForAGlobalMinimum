@@ -24,6 +24,14 @@ public:
 		function = _func;
 	}
 
+	virtual void RenewSearchData(double _x)
+	{
+		double _y = Function(_x);
+		TPoint tmp;
+		tmp.x = _x; tmp.y = _y;
+		pData->insert(tmp, root);
+	}
+
 	double Function(double x)
 	{
 		return function.Calculate(x);
@@ -87,8 +95,8 @@ public:
 	{
 		mapP Points;
 		TPoint result;
-		double B = 9;
-		double A = 0;
+		double B = pTask->xr;
+		double A = pTask->xl;
 		double m, tmpX, tmpY;
 		int pair = 1;
 		Points.insert(make_pair(A, Function(A)));
@@ -119,6 +127,7 @@ public:
 
 			tmpX = SetPoint(tmp, tmp2, m);
 			tmpY = Function(tmpX);
+			RenewSearchData(tmpX);
 
 			if (tmpY > maxZ) maxZ = tmpY;
 			if (tmpY < minZ)
