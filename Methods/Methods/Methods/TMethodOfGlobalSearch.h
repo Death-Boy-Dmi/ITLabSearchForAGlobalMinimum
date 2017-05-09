@@ -6,10 +6,10 @@ protected:
 	TFunction function;
 public:
 
-	TMethodOfGlobalSearch(TTask *_pTask/*, TSearchData *_pData*/)
+	TMethodOfGlobalSearch(TTask *_pTask, TSearchData *_pData)
 	{
 		pTask = _pTask;
-		//pData = _pData;
+		pData = _pData;
 		TFunction _func(pTask->str_function);
 		function = _func;
 	}
@@ -21,7 +21,15 @@ public:
 	}
 	
 	~TMethodOfGlobalSearch() { }
-
+	
+	virtual void RenewSearchData(double _x)
+	{
+		double _y = f(_x);
+		TPoint tmp;
+		tmp.x = _x; tmp.y = _y;
+		pData->insert(tmp, root);
+	}
+	
 	virtual TPoint CalculateOptimum()
 	{
 		TPoint result;
@@ -88,6 +96,7 @@ public:
 			}
 
 			x[i + 1] = 0.5*(x[maxIR] + x[maxIR - 1]) - 0.5*(f(x[maxIR]) - f(x[maxIR - 1])) / m;
+			RenewSearchData(x[i + 1]);
 
 			if (f(x[i + 1]) < minF)
 			{
