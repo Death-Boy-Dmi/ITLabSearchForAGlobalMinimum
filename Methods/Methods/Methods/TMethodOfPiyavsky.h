@@ -53,13 +53,13 @@ protected:
 
 public:
 
-	TMethodOfPiyavsky(TTask *_pTask, TSearchData *_pData)
+	TMethodOfPiyavsky(TTask *_pTask, double _M, TSearchData *_pData)
 	{
 		pTask = _pTask;
 		pData = _pData;
 		TFunction _func(pTask->str_function);
 		function = _func;
-		M = pTask->r;
+		M = _M;
 	}
 	~TMethodOfPiyavsky() { }
 

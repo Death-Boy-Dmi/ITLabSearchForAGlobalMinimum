@@ -1,8 +1,7 @@
-
-#include <iostream>
+п»ї#include <iostream>
 using namespace std;
 
-typedef struct node *nodeptr;
+typedef struct TNode *nodeptr;
 
 //
 //struct TTask
@@ -14,41 +13,37 @@ typedef struct node *nodeptr;
 //	int maxOfIterations;
 //};
 
-struct TTrial
+struct TPoint
 {
-	double x; //точка на одномерном отрезке
-	double FuncValue; //значение функции
+	double x; //С‚РѕС‡РєР° РЅР° РѕРґРЅРѕРјРµСЂРЅРѕРј РѕС‚СЂРµР·РєРµ
+	double y; //Р·РЅР°С‡РµРЅРёРµ С„СѓРЅРєС†РёРё
 };
 
 
-struct node
+struct TNode
 {
-	TTrial element; // ключ узла, является x
-	int height; // высота поддерева с корнем в данном узле
-	node *left;
-	node *right;
+	TPoint element; // РєР»СЋС‡ СѓР·Р»Р°, СЏРІР»СЏРµС‚СЃСЏ x
+	int height; // РІС‹СЃРѕС‚Р° РїРѕРґРґРµСЂРµРІР° СЃ РєРѕСЂРЅРµРј РІ РґР°РЅРЅРѕРј СѓР·Р»Рµ
+	TNode *left;
+	TNode *right;
 };
 
-//  узлы АВЛ-дерева хранят не высоту, а разницу высот правого и левого поддеревьев (так называемый balance factor)
+//  СѓР·Р»С‹ РђР’Р›-РґРµСЂРµРІР° С…СЂР°РЅСЏС‚ РЅРµ РІС‹СЃРѕС‚Сѓ, Р° СЂР°Р·РЅРёС†Сѓ РІС‹СЃРѕС‚ РїСЂР°РІРѕРіРѕ Рё Р»РµРІРѕРіРѕ РїРѕРґРґРµСЂРµРІСЊРµРІ (С‚Р°Рє РЅР°Р·С‹РІР°РµРјС‹Р№ balance factor)
 
 
-class Tree
+class TavlTree
 {
 
 public:
-	void insert(TTrial x, nodeptr &p)
+	void insert(TPoint x, nodeptr &p)
 	{
 		if (p == NULL)
 		{
-			p = new node;
+			p = new TNode;
 			p->element.x = x.x;
 			p->left = NULL;
 			p->right = NULL;
 			p->height = 0;
-			if (p == NULL)
-			{
-				cout << "Out of Space\n" << endl;
-			}
 		}
 		else
 		{
@@ -82,10 +77,6 @@ public:
 					}
 				}
 			}
-			else
-			{
-				cout << "Элемет существует\n" << endl;
-			}
 		}
 		int m, n, d;
 		m = bsheight(p->left);
@@ -98,7 +89,6 @@ public:
 	{
 		if (p == NULL)
 		{
-			cout << "В дереве нет элементов\n" << endl;
 			return p;
 		}
 		else
@@ -116,7 +106,6 @@ public:
 	{
 		if (p == NULL)
 		{
-			cout << "В дереве нет элементов\n" << endl;
 			return p;
 		}
 		else
@@ -129,13 +118,9 @@ public:
 		}
 	}
 
-	void find(TTrial x, nodeptr &p)
+	void find(TPoint x, nodeptr &p)
 	{
-		if (p == NULL)
-		{
-			cout << "Простите, но такого элемента нет\n" << endl;
-		}
-		else
+		if (!(p == NULL))
 		{
 			if (x.x < p->element.x)
 			{
@@ -147,10 +132,6 @@ public:
 				{
 					find(x, p->right);
 				}
-				else
-				{
-					cout << "Элемент, который вы искали есть в дереве!\n" << endl;
-				}
 			}
 		}
 	}
@@ -161,7 +142,7 @@ public:
 		nodeptr d;
 		if (p == NULL)
 		{
-			cout << "Простите, но такого элемента нет\n" << endl;
+			cout << "РџСЂРѕСЃС‚РёС‚Рµ, РЅРѕ С‚Р°РєРѕРіРѕ СЌР»РµРјРµРЅС‚Р° РЅРµС‚\n" << endl;
 		}
 		else if (x < p->element)
 		{
@@ -176,21 +157,21 @@ public:
 			d = p;
 			free(d);
 			p = NULL;
-			cout << "Элемент удален\n" << endl;
+			cout << "Р­Р»РµРјРµРЅС‚ СѓРґР°Р»РµРЅ\n" << endl;
 		}
 		else if (p->left == NULL)
 		{
 			d = p;
 			free(d);
 			p = p->right;
-			cout << "Элемент удален\n" << endl;
+			cout << "Р­Р»РµРјРµРЅС‚ СѓРґР°Р»РµРЅ\n" << endl;
 		}
 		else if (p->right == NULL)
 		{
 			d = p;
 			p = p->left;
 			free(d);
-			cout << "Элемент удален\n" << endl;
+			cout << "Р­Р»РµРјРµРЅС‚ СѓРґР°Р»РµРЅ\n" << endl;
 		}
 		else
 		{

@@ -1,10 +1,8 @@
 #include "../../Function/TFunction.h"
+#include "../../SearchData/TavlTree.h"
 
-struct TPoint
-{
-	double x;
-	double y;
-};
+typedef struct TavlTree TSearchData;
+
 struct TTask
 {
 	std::string str_function;
@@ -25,14 +23,14 @@ protected:
 	/// ”казатель на решаемую задачу
 	TTask *pTask;
 	/// ”казатель на матрицу состо€ни€ поиска
-	/*TSearchData *pData;*/
+	TSearchData *pData;
+	nodeptr root;
 
 public:
 	IMethod() {	}
-	IMethod(int _MaxNumOfTrials, double _Eps, TTask *_pTask/*, TSearchData *_pData*/) {	}
+	IMethod(int _MaxNumOfTrials, double _Eps, TTask *_pTask, TSearchData *_pData) {	}
 	~IMethod() { }
 
-	//virtual void RenewSearchData() = 0;
-
+	virtual void RenewSearchData() = 0;
 	virtual TPoint CalculateOptimum() = 0;
 };
