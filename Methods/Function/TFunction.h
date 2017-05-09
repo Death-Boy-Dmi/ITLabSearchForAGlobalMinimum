@@ -3,7 +3,8 @@
 #define Error_1000 1000 // incorrect brackets
 #define Error_1001 1001 // incorrect string
 #define Error_1002 1002 // incorrect functions
-#define Error_1004 1004
+#define Error_1003 1003 // divide by zero
+#define Error_1004 1004 // logarithm <=0
 
 #include <string>
 #include <stack>
