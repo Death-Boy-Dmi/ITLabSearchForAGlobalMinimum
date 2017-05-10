@@ -150,7 +150,9 @@
     <ClInclude Include="..\..\SearchData\TavlTree.h" />
     <ClInclude Include="IMethod.h" />
     <ClInclude Include="TMethodOfGlobalSearch.h" />
+    <ClInclude Include="TMethodOfKushner.h" />
     <ClInclude Include="TMethodOfPiyavsky.h" />
+    <ClInclude Include="TMonotoneMethod.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\Function\TFunction.cpp" />
