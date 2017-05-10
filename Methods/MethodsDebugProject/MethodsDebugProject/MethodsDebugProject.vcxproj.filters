@@ -32,15 +32,6 @@
     <ClInclude Include="Headers\TFunction.h">
       <Filter>Заголовочные файлы</Filter>
     </ClInclude>
-    <ClInclude Include="Headers\TMethodOfGlobalSearch.h">
-      <Filter>Заголовочные файлы</Filter>
-    </ClInclude>
-    <ClInclude Include="Headers\TMethodOfKushner.h">
-      <Filter>Заголовочные файлы</Filter>
-    </ClInclude>
-    <ClInclude Include="Headers\TMethodOfPiyavsky.h">
-      <Filter>Заголовочные файлы</Filter>
-    </ClInclude>
     <ClInclude Include="Headers\TMonotoneMethod.h">
       <Filter>Заголовочные файлы</Filter>
     </ClInclude>
