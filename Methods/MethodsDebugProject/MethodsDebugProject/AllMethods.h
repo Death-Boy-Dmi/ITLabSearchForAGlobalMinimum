@@ -4,6 +4,8 @@
 #include <map>
 #include "Headers\IMethod.h"
 
+using namespace std;
+
 typedef map<double, double> mapP;
 
 class TMonotoneMethod : public IMethod
