@@ -4,7 +4,8 @@
 #include <map>
 #include "Headers\IMethod.h"
 
-using namespace std;
+using std::map;
+using std::make_pair;
 
 typedef map<double, double> mapP;
 
