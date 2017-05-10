@@ -9,8 +9,8 @@ void main()
 	TPoint optimumD;
 	TSearchData pDataD;
 	///
-	//TPoint optimumM;
-	//TSearchData pDataM;
+	TPoint optimumM;
+	TSearchData pDataM;
 	///
 	TPoint optimumN;
 	TSearchData pDataN;
@@ -23,15 +23,15 @@ void main()
 	task.xr = 30;
 	task.maxOfIterations = 100;
 	task.eps = 0.001;
-	task.r = 3;
+	task.r = 7;
 	///
 	TMethodOfGlobalSearch MoGS(&task,&pDataD);
 	optimumD = MoGS.CalculateOptimum();
 	cout << "(" << optimumD.x << ", " << optimumD.y << ")" << endl;
 
-	//TMonotoneMethod MMoGS(&task, &pDataM);
-	//optimumM = MMoGS.CalculateOptimum();
-	//cout << "(" << optimumM.x << ", " << optimumM.y << ")" << endl;
+	TMonotoneMethod MMoGS(&task, &pDataM);
+	optimumM = MMoGS.CalculateOptimum();
+	cout << "(" << optimumM.x << ", " << optimumM.y << ")" << endl;
 
 	double M = 3;
 	TMethodOfPiyavsky MoP(&task, M, &pDataN);
