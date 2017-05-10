@@ -146,6 +146,18 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Sources\SourceTestMain.cpp" />
+    <ClCompile Include="Sources\TFunction.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AllMethods.h" />
+    <ClInclude Include="Headers\IMethod.h" />
+    <ClInclude Include="Headers\TavlTree.h" />
+    <ClInclude Include="Headers\TFunction.h" />
+    <ClInclude Include="Headers\TMethodOfGlobalSearch.h" />
+    <ClInclude Include="Headers\TMethodOfKushner.h" />
+    <ClInclude Include="Headers\TMethodOfPiyavsky.h" />
+    <ClInclude Include="Headers\TMonotoneMethod.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
