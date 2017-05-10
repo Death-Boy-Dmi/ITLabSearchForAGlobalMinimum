@@ -14,19 +14,20 @@ class TMonotoneMethod : public IMethod
 protected:
 	TFunction function;
 	double maxZ, minZ, minX, m;
-
+	int r;
 	double Transform(mapP::iterator pair)
 	{
 		return sqrt(1 - pow(((maxZ - pair->second) / (maxZ - minZ)), 2));
 	}
 
 public:
-	TMonotoneMethod(TTask *_pTask, TSearchData *_pData)
+	TMonotoneMethod(TTask *_pTask, int _r, TSearchData *_pData)
 	{
 		pTask = _pTask;
 		pData = _pData;
 		TFunction _func(pTask->str_function);
 		function = _func;
+		r = _r;
 	}
 
 	virtual void RenewSearchData(double _x)
@@ -75,7 +76,7 @@ public:
 		if (tmp == 0)
 			result = 1;
 		else if (tmp > last)
-			result = pTask->r * tmp;
+			result = r * tmp;
 		else
 			result = last;
 
@@ -168,14 +169,16 @@ class TMethodOfGlobalSearch : public IMethod
 {
 protected:
 	TFunction function;
+	int r;
 public:
 
-	TMethodOfGlobalSearch(TTask *_pTask, TSearchData *_pData)
+	TMethodOfGlobalSearch(TTask *_pTask, int _r, TSearchData *_pData)
 	{
 		pTask = _pTask;
 		pData = _pData;
 		TFunction _func(pTask->str_function);
 		function = _func;
+		r = _r;
 	}
 
 	double f(double x)
@@ -240,7 +243,7 @@ public:
 
 			if (maxM > 0)
 			{
-				m = pTask->r*maxM;
+				m = r*maxM;
 			}
 
 			for (size_t j = 1; j <= i; j++)

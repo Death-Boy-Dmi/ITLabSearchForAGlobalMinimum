@@ -154,7 +154,6 @@
     <ClInclude Include="Headers\IMethod.h" />
     <ClInclude Include="Headers\TavlTree.h" />
     <ClInclude Include="Headers\TFunction.h" />
-    <ClInclude Include="Headers\TMonotoneMethod.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

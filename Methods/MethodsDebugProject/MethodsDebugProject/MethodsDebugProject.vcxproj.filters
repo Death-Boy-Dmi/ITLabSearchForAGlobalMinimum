@@ -32,9 +32,6 @@
     <ClInclude Include="Headers\TFunction.h">
       <Filter>Заголовочные файлы</Filter>
     </ClInclude>
-    <ClInclude Include="Headers\TMonotoneMethod.h">
-      <Filter>Заголовочные файлы</Filter>
-    </ClInclude>
     <ClInclude Include="AllMethods.h">
       <Filter>Заголовочные файлы</Filter>
     </ClInclude>

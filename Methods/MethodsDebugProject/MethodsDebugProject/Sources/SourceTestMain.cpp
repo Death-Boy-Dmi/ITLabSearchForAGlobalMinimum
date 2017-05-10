@@ -23,17 +23,17 @@ void main()
 	task.xr = 30;
 	task.maxOfIterations = 100;
 	task.eps = 0.001;
-	task.r = 7;
+	int r = 7;
 	///
-	TMethodOfGlobalSearch MoGS(&task,&pDataD);
+	TMethodOfGlobalSearch MoGS(&task, r, &pDataD);
 	optimumD = MoGS.CalculateOptimum();
 	cout << "(" << optimumD.x << ", " << optimumD.y << ")" << endl;
 
-	TMonotoneMethod MMoGS(&task, &pDataM);
+	TMonotoneMethod MMoGS(&task, r, &pDataM);
 	optimumM = MMoGS.CalculateOptimum();
 	cout << "(" << optimumM.x << ", " << optimumM.y << ")" << endl;
 
-	double M = 3;
+	double M = 0.5;
 	TMethodOfPiyavsky MoP(&task, M, &pDataN);
 	optimumN = MoP.CalculateOptimum();
 	cout << "(" << optimumN.x << ", " << optimumN.y << ")" << endl;
@@ -42,5 +42,4 @@ void main()
 	TMethodOfKushner MoK(&task, Y, &pDataS);
 	optimumS = MoK.CalculateOptimum();
 	cout << "(" << optimumS.x << ", " << optimumS.y << ")" << endl;
-
 }

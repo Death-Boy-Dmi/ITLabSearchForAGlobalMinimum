@@ -10,7 +10,6 @@ struct TTask
 	double xr;
 	double eps;
 	int maxOfIterations;
-	int r;
 };
 
 class IMethod
