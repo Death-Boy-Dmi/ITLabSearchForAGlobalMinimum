@@ -18,6 +18,16 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Headers\AllMethods.h" />
+    <ClInclude Include="Headers\IMethod.h" />
+    <ClInclude Include="Headers\TavlTree.h" />
+    <ClInclude Include="Headers\TFunction.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Sources\SourceTestMain.cpp" />
+    <ClCompile Include="Sources\TFunction.cpp" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{6A8DEA60-AE82-4142-BF66-EF1B73340D35}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
@@ -145,14 +155,6 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClInclude Include="..\..\Function\TFunction.h" />
-    <ClInclude Include="IMethod.h" />
-    <ClInclude Include="TMethodOfGlobalSearch.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="..\..\Function\TFunction.cpp" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

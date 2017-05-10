@@ -1,6 +1,6 @@
 #pragma once
 
-#include "TFunction.h"
+#include "../Headers/TFunction.h"
 
 template<typename ValType>//потому что в STL для stack нет метода извлечения элемента с последующим его удалением
 ValType TFunction::get(std::stack<ValType> &st)
