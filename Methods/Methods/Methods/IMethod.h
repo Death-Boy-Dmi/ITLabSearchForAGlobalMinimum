@@ -31,6 +31,6 @@ public:
 	IMethod(int _MaxNumOfTrials, double _Eps, TTask *_pTask, TSearchData *_pData) {	}
 	~IMethod() { }
 
-	virtual void RenewSearchData() = 0;
+	virtual void RenewSearchData(double _x) = 0;
 	virtual TPoint CalculateOptimum() = 0;
 };
