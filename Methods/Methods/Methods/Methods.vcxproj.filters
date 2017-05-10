@@ -15,33 +15,24 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\Function\TFunction.h">
+    <ClInclude Include="Headers\AllMethods.h">
       <Filter>Заголовочные файлы</Filter>
     </ClInclude>
-    <ClInclude Include="IMethod.h">
+    <ClInclude Include="Headers\IMethod.h">
       <Filter>Заголовочные файлы</Filter>
     </ClInclude>
-    <ClInclude Include="TMethodOfGlobalSearch.h">
+    <ClInclude Include="Headers\TavlTree.h">
       <Filter>Заголовочные файлы</Filter>
     </ClInclude>
-    <ClInclude Include="TMethodOfPiyavsky.h">
-      <Filter>Заголовочные файлы</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\SearchData\TavlTree.h">
-      <Filter>Заголовочные файлы</Filter>
-    </ClInclude>
-    <ClInclude Include="TMethodOfKushner.h">
-      <Filter>Заголовочные файлы</Filter>
-    </ClInclude>
-    <ClInclude Include="TMonotoneMethod.h">
+    <ClInclude Include="Headers\TFunction.h">
       <Filter>Заголовочные файлы</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\Function\TFunction.cpp">
+    <ClCompile Include="Sources\SourceTestMain.cpp">
       <Filter>Файлы исходного кода</Filter>
     </ClCompile>
-    <ClCompile Include="SourceTestMain.cpp">
+    <ClCompile Include="Sources\TFunction.cpp">
       <Filter>Файлы исходного кода</Filter>
     </ClCompile>
   </ItemGroup>

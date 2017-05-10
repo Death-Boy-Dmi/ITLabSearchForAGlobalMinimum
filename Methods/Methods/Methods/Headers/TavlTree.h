@@ -1,7 +1,8 @@
-﻿#include <iostream>
-using namespace std;
+﻿
+#include <iostream>
+//using namespace std;
 
-typedef struct TNode *nodeptr;
+typedef struct node *nodeptr;
 
 //
 //struct TTask
@@ -20,12 +21,12 @@ struct TPoint
 };
 
 
-struct TNode
+struct node
 {
 	TPoint element; // ключ узла, является x
 	int height; // высота поддерева с корнем в данном узле
-	TNode *left;
-	TNode *right;
+	node *left;
+	node *right;
 };
 
 //  узлы АВЛ-дерева хранят не высоту, а разницу высот правого и левого поддеревьев (так называемый balance factor)
@@ -39,7 +40,7 @@ public:
 	{
 		if (p == NULL)
 		{
-			p = new TNode;
+			p = new node;
 			p->element.x = x.x;
 			p->left = NULL;
 			p->right = NULL;
@@ -118,72 +119,80 @@ public:
 		}
 	}
 
-	void find(TPoint x, nodeptr &p)
-	{
-		if (!(p == NULL))
-		{
-			if (x.x < p->element.x)
-			{
-				find(x, p->left);
-			}
-			else
-			{
-				if (x.x>p->element.x)
-				{
-					find(x, p->right);
-				}
-			}
-		}
-	}
+	//void find(TPoint x, nodeptr &p)
+	//{
+	//	if (p == NULL)
+	//	{
+	//		return;
+	//	}
+	//	else
+	//	{
+	//		if (x.x < p->element.x)
+	//		{
+	//			find(x, p->left);
+	//		}
+	//		else
+	//		{
+	//			if (x.x>p->element.x)
+	//			{
+	//				find(x, p->right);
+	//			}
+	//			else
+	//			{
+	//				cout << "Элемент, который вы искали есть в дереве!\n" << endl;
+	//			}
+	//		}
+	//	}
+	//}
 
 
 	/*void del(int x, nodeptr &p)
 	{
-		nodeptr d;
-		if (p == NULL)
-		{
-			cout << "Простите, но такого элемента нет\n" << endl;
-		}
-		else if (x < p->element)
-		{
-			del(x, p->left);
-		}
-		else if (x > p->element)
-		{
-			del(x, p->right);
-		}
-		else if ((p->left == NULL) && (p->right == NULL))
-		{
-			d = p;
-			free(d);
-			p = NULL;
-			cout << "Элемент удален\n" << endl;
-		}
-		else if (p->left == NULL)
-		{
-			d = p;
-			free(d);
-			p = p->right;
-			cout << "Элемент удален\n" << endl;
-		}
-		else if (p->right == NULL)
-		{
-			d = p;
-			p = p->left;
-			free(d);
-			cout << "Элемент удален\n" << endl;
-		}
-		else
-		{
-			p->element = deletemin(p->right);
-		}
+	nodeptr d;
+	if (p == NULL)
+	{
+	cout << "Простите, но такого элемента нет\n" << endl;
+	}
+	else if (x < p->element)
+	{
+	del(x, p->left);
+	}
+	else if (x > p->element)
+	{
+	del(x, p->right);
+	}
+	else if ((p->left == NULL) && (p->right == NULL))
+	{
+	d = p;
+	free(d);
+	p = NULL;
+	cout << "Элемент удален\n" << endl;
+	}
+	else if (p->left == NULL)
+	{
+	d = p;
+	free(d);
+	p = p->right;
+	cout << "Элемент удален\n" << endl;
+	}
+	else if (p->right == NULL)
+	{
+	d = p;
+	p = p->left;
+	free(d);
+	cout << "Элемент удален\n" << endl;
+	}
+	else
+	{
+	p->element = deletemin(p->right);
+	}
 	}*/
 
 	void preorder(nodeptr p)
 	{
 		if (p != NULL)
 		{
-			cout << p->element.x << "\t";
+			//cout << p->element.x << "\t";
 			preorder(p->left);
 			preorder(p->right);
 		}
@@ -194,7 +203,7 @@ public:
 		if (p != NULL)
 		{
 			inorder(p->left);
-			cout << p->element.x << "\t";
+			//cout << p->element.x << "\t";
 			inorder(p->right);
 		}
 	}
@@ -206,7 +215,7 @@ public:
 		{
 			postorder(p->left);
 			postorder(p->right);
-			cout << p->element.x << "\t";
+			//cout << p->element.x << "\t";
 		}
 	}
 
