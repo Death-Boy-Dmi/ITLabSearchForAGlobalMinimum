@@ -38,7 +38,8 @@ void main()
 	optimumN = MoP.CalculateOptimum();
 	cout << "(" << optimumN.x << ", " << optimumN.y << ")" << endl;
 
-	TMethodOfKushner MoK(&task, &pDataS);
+	double Y = 0.5;
+	TMethodOfKushner MoK(&task, Y, &pDataS);
 	optimumS = MoK.CalculateOptimum();
 	cout << "(" << optimumS.x << ", " << optimumS.y << ")" << endl;
 

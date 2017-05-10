@@ -392,13 +392,13 @@ protected:
 	double Y; // parametr metoda ot 0 do 1
 public:
 
-	TMethodOfKushner(TTask *_pTask, TSearchData *_pData)
+	TMethodOfKushner(TTask *_pTask, double _Y, TSearchData *_pData)
 	{
 		pTask = _pTask;
 		pData = _pData;
 		TFunction _func(pTask->str_function);
 		function = _func;
-		Y = _pTask->r;
+		Y = _Y;
 	}
 
 	double f(double x)
@@ -433,9 +433,9 @@ public:
 		unsigned int maxIR = 0;
 
 
-
 		x[0] = pTask->xl;
 		x[1] = pTask->xr;
+		int dx = abs(x[0] - x[1]);
 
 		z[0] = f(x[0]);
 		z[1] = f(x[1]);
@@ -456,29 +456,31 @@ public:
 			for (size_t j = 0; j < i; j++)
 				for (size_t l = 0; l < i - j; l++)
 					if (x[l] > x[l + 1])
+
 						std::swap(x[l], x[l + 1]);
 
 
-			for (int i = 0; i<pTask->maxOfIterations; i++)
+			for (int c = 0; c <= i; c++)
 			{
-				if (z[i]<minZ)
-					minZ = z[i];
+				if (z[c]<minZ)
+					minZ = z[c];
 			}
 
 			for (size_t j = 1; j <= i; j++)
 			{
 				R[j - 1] = -4 * ((minZ - Y - z[j - 1])*(minZ - Y - z[j])) / (x[j] - x[j - 1]);
 
+				if (j == 1)
+				{
+					maxR = R[j];
+					maxIR = j;
+				}
+
 				if (R[j - 1] > maxR)
 				{
 					maxR = R[j];
 					maxIR = j;
 				}
-			}
-
-			if (abs(x[maxIR] - x[maxIR - 1]) < pTask->eps)
-			{
-				break;
 			}
 
 			x[i + 1] = x[maxIR - 1] + ((x[maxIR] - x[maxIR - 1])*(minZ - Y - z[maxIR - 1])) / (2 * (minZ - Y) - z[maxIR] - z[maxIR - 1]);
@@ -490,6 +492,9 @@ public:
 				minZ = z[i + 1];
 				minX = x[i + 1];
 			}
+			dx -= pTask->eps;
+			if (dx <= pTask->eps)
+				break;
 
 		}
 
