@@ -15,9 +15,14 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Headers\AllMethods.h">
-      <Filter>Заголовочные файлы</Filter>
-    </ClInclude>
+    <ClCompile Include="Sources\SourceTestMain.cpp">
+      <Filter>Файлы исходного кода</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\TFunction.cpp">
+      <Filter>Файлы исходного кода</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
     <ClInclude Include="Headers\IMethod.h">
       <Filter>Заголовочные файлы</Filter>
     </ClInclude>
@@ -27,13 +32,8 @@
     <ClInclude Include="Headers\TFunction.h">
       <Filter>Заголовочные файлы</Filter>
     </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="Sources\SourceTestMain.cpp">
-      <Filter>Файлы исходного кода</Filter>
-    </ClCompile>
-    <ClCompile Include="Sources\TFunction.cpp">
-      <Filter>Файлы исходного кода</Filter>
-    </ClCompile>
+    <ClInclude Include="AllMethods.h">
+      <Filter>Заголовочные файлы</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

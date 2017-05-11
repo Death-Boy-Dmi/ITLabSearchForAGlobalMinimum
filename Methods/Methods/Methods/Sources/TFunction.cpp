@@ -1,6 +1,6 @@
 #pragma once
 
-#include "TFunction.h"
+#include "../Headers/TFunction.h"
 
 template<typename ValType>//потому что в STL для stack нет метода извлечения элемента с последующим его удалением
 ValType TFunction::get(std::stack<ValType> &st)
@@ -25,18 +25,22 @@ std::string TFunction::CutInfix(std::string Line)
 	std::string CutIn = "";
 	std::string temp = "";
 	bool Check = false;
+	bool CheckForName = false;
 
 	if (Priority(Line[0])==2)
 		Line = Line.insert(0, "0");
-	else if (Priority(Line[0]) == 3)
+	else if (Priority(Line[0]) == 3 || Priority(Line[0]) == 4)
 		throw Error_1001;
 	for (std::string::iterator it = Line.begin(); it != Line.end(); ++it)
 	{
 		if ((*it >= 'a') && (*it <= 'z') && (*it != 'x'))
 		{
+			CheckForName = true;
 			temp += *it;
 			Check = true;
 		}
+		else if (CheckForName && *it!='(')
+			temp += *it;
 		else
 			if (*it != '(')
 			{
@@ -44,6 +48,9 @@ std::string TFunction::CutInfix(std::string Line)
 			}
 		if (*it == '(')
 		{
+			CheckForName = false;
+			if (*(it + 1) == ')')
+				throw Error_1000;
 			if ((*(it + 1) == '-')||(*(it + 1)=='+'))
 			{
 				Line = Line.insert(1 + std::distance(Line.begin(), it), "0");
@@ -60,8 +67,14 @@ std::string TFunction::CutInfix(std::string Line)
 					CutIn += "t(";
 				else if (temp == "ctg")
 					CutIn += "k(";
-				else if (temp == "log")
+				else if (temp == "ln")
 					CutIn += "l(";
+				else if (temp == "log10")
+					CutIn += "b(";
+				else if (temp == "log2")
+					CutIn += "d(";
+				else if (temp == "abs")
+					CutIn += "a(";
 				else
 					throw Error_1002;
 				temp = "";
@@ -87,7 +100,7 @@ int TFunction::Priority(char Operation)
 	else if (Operation == '^')
 		return 4;
 	else if ((Operation == 's') || (Operation == 'c') || (Operation == 'l') || (Operation == 't') ||
-		(Operation == 'k'))
+		(Operation == 'k') || (Operation == 'b') || (Operation == 'd') || (Operation == 'a'))
 		return 5;
 	else if ((Operation >= '0') && (Operation <= '9') || (Operation == '.')) //если символ - составляющее числа
 		return -1;
@@ -105,13 +118,16 @@ std::string TFunction::InfiToPost(void)
 	std::string Post = "";
 	bool NumbCheck = false;
 	bool VarCheck = false;
-
+	if (Infix[0] == '.')
+		throw Error_1001;
 	for (std::string::iterator it = Infix.begin(); it != Infix.end(); ++it) {
 		int priority = Priority(*it);
 		if (*it == '\0')
 			break;
 		if (priority == -1) {
-			if ((*it == '.') && (*(it + 1) == '.'))
+			if ((*it == '.') && ((*(it + 1) == '.')||Priority(*(it + 1))!=-1))
+				throw Error_1001;
+			if ((*it == '.') && (it != Infix.begin() && Priority(*(it - 1)) != -1))
 				throw Error_1001;
 			if (!VarCheck) {
 				Post += *it;
@@ -204,7 +220,10 @@ double TFunction::CalcBin(double Fir, double Sec, char Op)
 	else if (Op == '*')
 		return Fir * Sec;
 	else if (Op == '/')
-		return Fir / Sec;
+		if (Sec != 0)
+			return Fir / Sec;
+		else
+			throw Error_1003;
 	else if (Op == '^')
 		return pow(Fir, Sec);
 }
@@ -213,14 +232,32 @@ double TFunction::StandartFunc(double Fir,char Op)
 {
 	if (Op == 's')
 		return sin(Fir);
+	else if (Op == 'a')
+		return abs(Fir);
 	else if (Op == 'c')
 		return cos(Fir);
 	else if (Op == 't')
 		return tan(Fir);
 	else if (Op == 'k')
-		return 1 / tan(Fir);
+		if (tan(Fir) != 0)
+			return 1 / tan(Fir);
+		else
+			throw Error_1003;
 	else if (Op == 'l')
-		return log(Fir);
+		if (Fir > 0)
+			return log(Fir);
+		else
+			throw Error_1004;
+	else if (Op == 'b')
+		if (Fir > 0)
+			return log10(Fir);
+		else
+			throw Error_1004;
+	else if (Op == 'd')
+		if (Fir > 0)
+			return log2(Fir);
+		else
+			throw Error_1004;
 }
 double TFunction::CalcPost(double x)
 {

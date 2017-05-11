@@ -1,7 +1,7 @@
-#include "../../Function/TFunction.h"
-#include "../../SearchData/TavlTree.h"
+#include "TFunction.h"
+#include "TavlTree.h"
 
-typedef struct TavlTree TSearchData;
+typedef class TavlTree TSearchData;
 
 struct TTask
 {
@@ -10,7 +10,6 @@ struct TTask
 	double xr;
 	double eps;
 	int maxOfIterations;
-	int r;
 };
 
 class IMethod

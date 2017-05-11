@@ -1,6 +1,6 @@
-
+ï»¿
 #include <iostream>
-using namespace std;
+//using namespace std;
 
 typedef struct node *nodeptr;
 
@@ -14,29 +14,29 @@ typedef struct node *nodeptr;
 //	int maxOfIterations;
 //};
 
-struct TTrial
+struct TPoint
 {
-	double x; //òî÷êà íà îäíîìåðíîì îòðåçêå
-	double FuncValue; //çíà÷åíèå ôóíêöèè
+	double x; //Ñ‚Ð¾Ñ‡ÐºÐ° Ð½Ð° Ð¾Ð´Ð½Ð¾Ð¼ÐµÑ€Ð½Ð¾Ð¼ Ð¾Ñ‚Ñ€ÐµÐ·ÐºÐµ
+	double y; //Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ Ñ„ÑƒÐ½ÐºÑ†Ð¸Ð¸
 };
 
 
 struct node
 {
-	TTrial element; // êëþ÷ óçëà, ÿâëÿåòñÿ x
-	int height; // âûñîòà ïîääåðåâà ñ êîðíåì â äàííîì óçëå
+	TPoint element; // ÐºÐ»ÑŽÑ‡ ÑƒÐ·Ð»Ð°, ÑÐ²Ð»ÑÐµÑ‚ÑÑ x
+	int height; // Ð²Ñ‹ÑÐ¾Ñ‚Ð° Ð¿Ð¾Ð´Ð´ÐµÑ€ÐµÐ²Ð° Ñ ÐºÐ¾Ñ€Ð½ÐµÐ¼ Ð² Ð´Ð°Ð½Ð½Ð¾Ð¼ ÑƒÐ·Ð»Ðµ
 	node *left;
 	node *right;
 };
 
-//  óçëû ÀÂË-äåðåâà õðàíÿò íå âûñîòó, à ðàçíèöó âûñîò ïðàâîãî è ëåâîãî ïîääåðåâüåâ (òàê íàçûâàåìûé balance factor)
+//  ÑƒÐ·Ð»Ñ‹ ÐÐ’Ð›-Ð´ÐµÑ€ÐµÐ²Ð° Ñ…Ñ€Ð°Ð½ÑÑ‚ Ð½Ðµ Ð²Ñ‹ÑÐ¾Ñ‚Ñƒ, Ð° Ñ€Ð°Ð·Ð½Ð¸Ñ†Ñƒ Ð²Ñ‹ÑÐ¾Ñ‚ Ð¿Ñ€Ð°Ð²Ð¾Ð³Ð¾ Ð¸ Ð»ÐµÐ²Ð¾Ð³Ð¾ Ð¿Ð¾Ð´Ð´ÐµÑ€ÐµÐ²ÑŒÐµÐ² (Ñ‚Ð°Ðº Ð½Ð°Ð·Ñ‹Ð²Ð°ÐµÐ¼Ñ‹Ð¹ balance factor)
 
 
-class Tree
+class TavlTree
 {
 
 public:
-	void insert(TTrial x, nodeptr &p)
+	void insert(TPoint x, nodeptr &p)
 	{
 		if (p == NULL)
 		{
@@ -45,10 +45,6 @@ public:
 			p->left = NULL;
 			p->right = NULL;
 			p->height = 0;
-			if (p == NULL)
-			{
-				cout << "Out of Space\n" << endl;
-			}
 		}
 		else
 		{
@@ -82,10 +78,6 @@ public:
 					}
 				}
 			}
-			else
-			{
-				cout << "Ýëåìåò ñóùåñòâóåò\n" << endl;
-			}
 		}
 		int m, n, d;
 		m = bsheight(p->left);
@@ -98,7 +90,6 @@ public:
 	{
 		if (p == NULL)
 		{
-			cout << "Â äåðåâå íåò ýëåìåíòîâ\n" << endl;
 			return p;
 		}
 		else
@@ -116,7 +107,6 @@ public:
 	{
 		if (p == NULL)
 		{
-			cout << "Â äåðåâå íåò ýëåìåíòîâ\n" << endl;
 			return p;
 		}
 		else
@@ -129,80 +119,80 @@ public:
 		}
 	}
 
-	void find(TTrial x, nodeptr &p)
-	{
-		if (p == NULL)
-		{
-			cout << "Ïðîñòèòå, íî òàêîãî ýëåìåíòà íåò\n" << endl;
-		}
-		else
-		{
-			if (x.x < p->element.x)
-			{
-				find(x, p->left);
-			}
-			else
-			{
-				if (x.x>p->element.x)
-				{
-					find(x, p->right);
-				}
-				else
-				{
-					cout << "Ýëåìåíò, êîòîðûé âû èñêàëè åñòü â äåðåâå!\n" << endl;
-				}
-			}
-		}
-	}
+	//void find(TPoint x, nodeptr &p)
+	//{
+	//	if (p == NULL)
+	//	{
+	//		return;
+	//	}
+	//	else
+	//	{
+	//		if (x.x < p->element.x)
+	//		{
+	//			find(x, p->left);
+	//		}
+	//		else
+	//		{
+	//			if (x.x>p->element.x)
+	//			{
+	//				find(x, p->right);
+	//			}
+	//			else
+	//			{
+	//				cout << "Ð­Ð»ÐµÐ¼ÐµÐ½Ñ‚, ÐºÐ¾Ñ‚Ð¾Ñ€Ñ‹Ð¹ Ð²Ñ‹ Ð¸ÑÐºÐ°Ð»Ð¸ ÐµÑÑ‚ÑŒ Ð² Ð´ÐµÑ€ÐµÐ²Ðµ!\n" << endl;
+	//			}
+	//		}
+	//	}
+	//}
 
 
 	/*void del(int x, nodeptr &p)
 	{
-		nodeptr d;
-		if (p == NULL)
-		{
-			cout << "Ïðîñòèòå, íî òàêîãî ýëåìåíòà íåò\n" << endl;
-		}
-		else if (x < p->element)
-		{
-			del(x, p->left);
-		}
-		else if (x > p->element)
-		{
-			del(x, p->right);
-		}
-		else if ((p->left == NULL) && (p->right == NULL))
-		{
-			d = p;
-			free(d);
-			p = NULL;
-			cout << "Ýëåìåíò óäàëåí\n" << endl;
-		}
-		else if (p->left == NULL)
-		{
-			d = p;
-			free(d);
-			p = p->right;
-			cout << "Ýëåìåíò óäàëåí\n" << endl;
-		}
-		else if (p->right == NULL)
-		{
-			d = p;
-			p = p->left;
-			free(d);
-			cout << "Ýëåìåíò óäàëåí\n" << endl;
-		}
-		else
-		{
-			p->element = deletemin(p->right);
-		}
+	nodeptr d;
+	if (p == NULL)
+	{
+	cout << "ÐŸÑ€Ð¾ÑÑ‚Ð¸Ñ‚Ðµ, Ð½Ð¾ Ñ‚Ð°ÐºÐ¾Ð³Ð¾ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð° Ð½ÐµÑ‚\n" << endl;
+	}
+	else if (x < p->element)
+	{
+	del(x, p->left);
+	}
+	else if (x > p->element)
+	{
+	del(x, p->right);
+	}
+	else if ((p->left == NULL) && (p->right == NULL))
+	{
+	d = p;
+	free(d);
+	p = NULL;
+	cout << "Ð­Ð»ÐµÐ¼ÐµÐ½Ñ‚ ÑƒÐ´Ð°Ð»ÐµÐ½\n" << endl;
+	}
+	else if (p->left == NULL)
+	{
+	d = p;
+	free(d);
+	p = p->right;
+	cout << "Ð­Ð»ÐµÐ¼ÐµÐ½Ñ‚ ÑƒÐ´Ð°Ð»ÐµÐ½\n" << endl;
+	}
+	else if (p->right == NULL)
+	{
+	d = p;
+	p = p->left;
+	free(d);
+	cout << "Ð­Ð»ÐµÐ¼ÐµÐ½Ñ‚ ÑƒÐ´Ð°Ð»ÐµÐ½\n" << endl;
+	}
+	else
+	{
+	p->element = deletemin(p->right);
+	}
 	}*/
 
 	void preorder(nodeptr p)
 	{
 		if (p != NULL)
 		{
-			cout << p->element.x << "\t";
+			//cout << p->element.x << "\t";
 			preorder(p->left);
 			preorder(p->right);
 		}
@@ -213,7 +203,7 @@ public:
 		if (p != NULL)
 		{
 			inorder(p->left);
-			cout << p->element.x << "\t";
+			//cout << p->element.x << "\t";
 			inorder(p->right);
 		}
 	}
@@ -225,7 +215,7 @@ public:
 		{
 			postorder(p->left);
 			postorder(p->right);
-			cout << p->element.x << "\t";
+			//cout << p->element.x << "\t";
 		}
 	}
 
