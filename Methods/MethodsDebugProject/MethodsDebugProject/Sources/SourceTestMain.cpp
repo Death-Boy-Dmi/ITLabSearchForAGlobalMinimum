@@ -18,12 +18,12 @@ void main()
 	TPoint optimumS;
 	TSearchData pDataS;
 	///
-	task.str_function = "(x/4)*cos(x)";
+	task.str_function = "x*cos(3.14*x)";
 	task.xl = 0;
-	task.xr = 30;
-	task.maxOfIterations = 100;
+	task.xr = 10;
+	task.maxOfIterations = 150;
 	task.eps = 0.001;
-	int r = 7;
+	int r = 3;
 	///
 	TMethodOfGlobalSearch MoGS(&task, r, &pDataD);
 	optimumD = MoGS.CalculateOptimum();

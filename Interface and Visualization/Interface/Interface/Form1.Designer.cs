@@ -31,6 +31,20 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.VisualizationPanel = new System.Windows.Forms.Panel();
+            this.Vbutton2 = new System.Windows.Forms.Button();
+            this.Vbutton1 = new System.Windows.Forms.Button();
+            this.GrafPanel = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.VgroupBox2 = new System.Windows.Forms.GroupBox();
+            this.VradioButton4 = new System.Windows.Forms.RadioButton();
+            this.VradioButton5 = new System.Windows.Forms.RadioButton();
+            this.VgroupBox1 = new System.Windows.Forms.GroupBox();
+            this.VradioButton1 = new System.Windows.Forms.RadioButton();
+            this.VradioButton2 = new System.Windows.Forms.RadioButton();
+            this.VradioButton3 = new System.Windows.Forms.RadioButton();
             this.label2 = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.label7 = new System.Windows.Forms.Label();
@@ -55,25 +69,11 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.Vbutton2 = new System.Windows.Forms.Button();
-            this.Vbutton1 = new System.Windows.Forms.Button();
-            this.GrafPanel = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.VradioButton1 = new System.Windows.Forms.RadioButton();
-            this.VradioButton2 = new System.Windows.Forms.RadioButton();
-            this.VradioButton3 = new System.Windows.Forms.RadioButton();
-            this.VgroupBox2 = new System.Windows.Forms.GroupBox();
-            this.VradioButton4 = new System.Windows.Forms.RadioButton();
-            this.VradioButton5 = new System.Windows.Forms.RadioButton();
-            this.VgroupBox1 = new System.Windows.Forms.GroupBox();
             this.VisualizationPanel.SuspendLayout();
-            this.DataInputPanel0.SuspendLayout();
             this.GrafPanel.SuspendLayout();
             this.VgroupBox2.SuspendLayout();
             this.VgroupBox1.SuspendLayout();
+            this.DataInputPanel0.SuspendLayout();
             this.SuspendLayout();
             // 
             // VisualizationPanel
@@ -89,6 +89,165 @@
             this.VisualizationPanel.Size = new System.Drawing.Size(567, 400);
             this.VisualizationPanel.TabIndex = 0;
             this.VisualizationPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.VisualizationPanel_Paint);
+            // 
+            // Vbutton2
+            // 
+            this.Vbutton2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.Vbutton2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.Vbutton2.Location = new System.Drawing.Point(11, 364);
+            this.Vbutton2.Name = "Vbutton2";
+            this.Vbutton2.Size = new System.Drawing.Size(74, 23);
+            this.Vbutton2.TabIndex = 22;
+            this.Vbutton2.Text = "Очистить";
+            this.Vbutton2.UseVisualStyleBackColor = true;
+            this.Vbutton2.Click += new System.EventHandler(this.Vbutton2_Click_1);
+            // 
+            // Vbutton1
+            // 
+            this.Vbutton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.Vbutton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.Vbutton1.Location = new System.Drawing.Point(11, 335);
+            this.Vbutton1.Name = "Vbutton1";
+            this.Vbutton1.Size = new System.Drawing.Size(74, 23);
+            this.Vbutton1.TabIndex = 21;
+            this.Vbutton1.Text = "Начертить";
+            this.Vbutton1.UseVisualStyleBackColor = true;
+            this.Vbutton1.Click += new System.EventHandler(this.Vbutton1_Click_1);
+            // 
+            // GrafPanel
+            // 
+            this.GrafPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.GrafPanel.AutoScroll = true;
+            this.GrafPanel.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.GrafPanel.Controls.Add(this.label1);
+            this.GrafPanel.Controls.Add(this.label4);
+            this.GrafPanel.Controls.Add(this.label10);
+            this.GrafPanel.Controls.Add(this.label11);
+            this.GrafPanel.Location = new System.Drawing.Point(11, 11);
+            this.GrafPanel.Name = "GrafPanel";
+            this.GrafPanel.Size = new System.Drawing.Size(543, 318);
+            this.GrafPanel.TabIndex = 20;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(3, 12);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(0, 13);
+            this.label1.TabIndex = 3;
+            // 
+            // label4
+            // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(0, 280);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(0, 13);
+            this.label4.TabIndex = 2;
+            // 
+            // label10
+            // 
+            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(505, 302);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(0, 13);
+            this.label10.TabIndex = 1;
+            // 
+            // label11
+            // 
+            this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(25, 302);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(0, 13);
+            this.label11.TabIndex = 0;
+            // 
+            // VgroupBox2
+            // 
+            this.VgroupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.VgroupBox2.Controls.Add(this.VradioButton4);
+            this.VgroupBox2.Controls.Add(this.VradioButton5);
+            this.VgroupBox2.Location = new System.Drawing.Point(345, 335);
+            this.VgroupBox2.Name = "VgroupBox2";
+            this.VgroupBox2.Size = new System.Drawing.Size(209, 52);
+            this.VgroupBox2.TabIndex = 24;
+            this.VgroupBox2.TabStop = false;
+            this.VgroupBox2.Text = "Тип осей координат:";
+            // 
+            // VradioButton4
+            // 
+            this.VradioButton4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.VradioButton4.AutoSize = true;
+            this.VradioButton4.Checked = true;
+            this.VradioButton4.Location = new System.Drawing.Point(7, 29);
+            this.VradioButton4.Name = "VradioButton4";
+            this.VradioButton4.Size = new System.Drawing.Size(101, 17);
+            this.VradioButton4.TabIndex = 15;
+            this.VradioButton4.TabStop = true;
+            this.VradioButton4.Text = "Динамические";
+            this.VradioButton4.UseVisualStyleBackColor = true;
+            // 
+            // VradioButton5
+            // 
+            this.VradioButton5.AutoSize = true;
+            this.VradioButton5.Location = new System.Drawing.Point(114, 29);
+            this.VradioButton5.Name = "VradioButton5";
+            this.VradioButton5.Size = new System.Drawing.Size(89, 17);
+            this.VradioButton5.TabIndex = 16;
+            this.VradioButton5.Text = "Статические";
+            this.VradioButton5.UseVisualStyleBackColor = true;
+            // 
+            // VgroupBox1
+            // 
+            this.VgroupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.VgroupBox1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.VgroupBox1.Controls.Add(this.VradioButton1);
+            this.VgroupBox1.Controls.Add(this.VradioButton2);
+            this.VgroupBox1.Controls.Add(this.VradioButton3);
+            this.VgroupBox1.Location = new System.Drawing.Point(91, 335);
+            this.VgroupBox1.Name = "VgroupBox1";
+            this.VgroupBox1.Size = new System.Drawing.Size(248, 52);
+            this.VgroupBox1.TabIndex = 23;
+            this.VgroupBox1.TabStop = false;
+            this.VgroupBox1.Text = "Отображение точек:";
+            // 
+            // VradioButton1
+            // 
+            this.VradioButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.VradioButton1.AutoSize = true;
+            this.VradioButton1.Checked = true;
+            this.VradioButton1.Location = new System.Drawing.Point(6, 29);
+            this.VradioButton1.Name = "VradioButton1";
+            this.VradioButton1.Size = new System.Drawing.Size(75, 17);
+            this.VradioButton1.TabIndex = 11;
+            this.VradioButton1.TabStop = true;
+            this.VradioButton1.Text = "Без точек";
+            this.VradioButton1.UseVisualStyleBackColor = true;
+            // 
+            // VradioButton2
+            // 
+            this.VradioButton2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.VradioButton2.AutoSize = true;
+            this.VradioButton2.Location = new System.Drawing.Point(87, 29);
+            this.VradioButton2.Name = "VradioButton2";
+            this.VradioButton2.Size = new System.Drawing.Size(85, 17);
+            this.VradioButton2.TabIndex = 12;
+            this.VradioButton2.Text = "На графике";
+            this.VradioButton2.UseVisualStyleBackColor = true;
+            // 
+            // VradioButton3
+            // 
+            this.VradioButton3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.VradioButton3.AutoSize = true;
+            this.VradioButton3.Location = new System.Drawing.Point(178, 29);
+            this.VradioButton3.Name = "VradioButton3";
+            this.VradioButton3.Size = new System.Drawing.Size(65, 17);
+            this.VradioButton3.TabIndex = 13;
+            this.VradioButton3.Text = "На осях";
+            this.VradioButton3.UseVisualStyleBackColor = true;
             // 
             // label2
             // 
@@ -241,9 +400,9 @@
             this.textBox7.Location = new System.Drawing.Point(306, 160);
             this.textBox7.Name = "textBox7";
             this.textBox7.ReadOnly = true;
-            this.textBox7.Size = new System.Drawing.Size(162, 29);
+            this.textBox7.Size = new System.Drawing.Size(181, 29);
             this.textBox7.TabIndex = 17;
-            this.textBox7.Text = "[ 0, 0 ]";
+            this.textBox7.Text = "[ 8.98901, -8.97829 ]";
             this.textBox7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox7.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
             // 
@@ -305,7 +464,7 @@
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(162, 29);
             this.textBox5.TabIndex = 8;
-            this.textBox5.Text = "1000";
+            this.textBox5.Text = "150";
             this.textBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBox4
@@ -317,7 +476,7 @@
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(162, 29);
             this.textBox4.TabIndex = 6;
-            this.textBox4.Text = "0.00001";
+            this.textBox4.Text = "0.001";
             this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBox3
@@ -329,7 +488,7 @@
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(162, 29);
             this.textBox3.TabIndex = 4;
-            this.textBox3.Text = "[ 0, 30 ]";
+            this.textBox3.Text = "[ 0, 10 ]";
             this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBox2
@@ -365,165 +524,6 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // Vbutton2
-            // 
-            this.Vbutton2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.Vbutton2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.Vbutton2.Location = new System.Drawing.Point(11, 364);
-            this.Vbutton2.Name = "Vbutton2";
-            this.Vbutton2.Size = new System.Drawing.Size(74, 23);
-            this.Vbutton2.TabIndex = 22;
-            this.Vbutton2.Text = "Очистить";
-            this.Vbutton2.UseVisualStyleBackColor = true;
-            this.Vbutton2.Click += new System.EventHandler(this.Vbutton2_Click_1);
-            // 
-            // Vbutton1
-            // 
-            this.Vbutton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.Vbutton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.Vbutton1.Location = new System.Drawing.Point(11, 335);
-            this.Vbutton1.Name = "Vbutton1";
-            this.Vbutton1.Size = new System.Drawing.Size(74, 23);
-            this.Vbutton1.TabIndex = 21;
-            this.Vbutton1.Text = "Начертить";
-            this.Vbutton1.UseVisualStyleBackColor = true;
-            this.Vbutton1.Click += new System.EventHandler(this.Vbutton1_Click_1);
-            // 
-            // GrafPanel
-            // 
-            this.GrafPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.GrafPanel.AutoScroll = true;
-            this.GrafPanel.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.GrafPanel.Controls.Add(this.label1);
-            this.GrafPanel.Controls.Add(this.label4);
-            this.GrafPanel.Controls.Add(this.label10);
-            this.GrafPanel.Controls.Add(this.label11);
-            this.GrafPanel.Location = new System.Drawing.Point(11, 11);
-            this.GrafPanel.Name = "GrafPanel";
-            this.GrafPanel.Size = new System.Drawing.Size(543, 318);
-            this.GrafPanel.TabIndex = 20;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(3, 12);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 13);
-            this.label1.TabIndex = 3;
-            // 
-            // label4
-            // 
-            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(0, 280);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(0, 13);
-            this.label4.TabIndex = 2;
-            // 
-            // label10
-            // 
-            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(505, 302);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(0, 13);
-            this.label10.TabIndex = 1;
-            // 
-            // label11
-            // 
-            this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(25, 302);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(0, 13);
-            this.label11.TabIndex = 0;
-            // 
-            // VradioButton1
-            // 
-            this.VradioButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.VradioButton1.AutoSize = true;
-            this.VradioButton1.Checked = true;
-            this.VradioButton1.Location = new System.Drawing.Point(6, 29);
-            this.VradioButton1.Name = "VradioButton1";
-            this.VradioButton1.Size = new System.Drawing.Size(75, 17);
-            this.VradioButton1.TabIndex = 11;
-            this.VradioButton1.TabStop = true;
-            this.VradioButton1.Text = "Без точек";
-            this.VradioButton1.UseVisualStyleBackColor = true;
-            // 
-            // VradioButton2
-            // 
-            this.VradioButton2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.VradioButton2.AutoSize = true;
-            this.VradioButton2.Location = new System.Drawing.Point(87, 29);
-            this.VradioButton2.Name = "VradioButton2";
-            this.VradioButton2.Size = new System.Drawing.Size(85, 17);
-            this.VradioButton2.TabIndex = 12;
-            this.VradioButton2.Text = "На графике";
-            this.VradioButton2.UseVisualStyleBackColor = true;
-            // 
-            // VradioButton3
-            // 
-            this.VradioButton3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.VradioButton3.AutoSize = true;
-            this.VradioButton3.Location = new System.Drawing.Point(178, 29);
-            this.VradioButton3.Name = "VradioButton3";
-            this.VradioButton3.Size = new System.Drawing.Size(65, 17);
-            this.VradioButton3.TabIndex = 13;
-            this.VradioButton3.Text = "На осях";
-            this.VradioButton3.UseVisualStyleBackColor = true;
-            // 
-            // VgroupBox2
-            // 
-            this.VgroupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.VgroupBox2.Controls.Add(this.VradioButton4);
-            this.VgroupBox2.Controls.Add(this.VradioButton5);
-            this.VgroupBox2.Location = new System.Drawing.Point(345, 335);
-            this.VgroupBox2.Name = "VgroupBox2";
-            this.VgroupBox2.Size = new System.Drawing.Size(209, 52);
-            this.VgroupBox2.TabIndex = 24;
-            this.VgroupBox2.TabStop = false;
-            this.VgroupBox2.Text = "Тип осей координат:";
-            // 
-            // VradioButton4
-            // 
-            this.VradioButton4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.VradioButton4.AutoSize = true;
-            this.VradioButton4.Checked = true;
-            this.VradioButton4.Location = new System.Drawing.Point(7, 29);
-            this.VradioButton4.Name = "VradioButton4";
-            this.VradioButton4.Size = new System.Drawing.Size(101, 17);
-            this.VradioButton4.TabIndex = 15;
-            this.VradioButton4.TabStop = true;
-            this.VradioButton4.Text = "Динамические";
-            this.VradioButton4.UseVisualStyleBackColor = true;
-            // 
-            // VradioButton5
-            // 
-            this.VradioButton5.AutoSize = true;
-            this.VradioButton5.Location = new System.Drawing.Point(114, 29);
-            this.VradioButton5.Name = "VradioButton5";
-            this.VradioButton5.Size = new System.Drawing.Size(89, 17);
-            this.VradioButton5.TabIndex = 16;
-            this.VradioButton5.Text = "Статические";
-            this.VradioButton5.UseVisualStyleBackColor = true;
-            // 
-            // VgroupBox1
-            // 
-            this.VgroupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.VgroupBox1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.VgroupBox1.Controls.Add(this.VradioButton1);
-            this.VgroupBox1.Controls.Add(this.VradioButton2);
-            this.VgroupBox1.Controls.Add(this.VradioButton3);
-            this.VgroupBox1.Location = new System.Drawing.Point(91, 335);
-            this.VgroupBox1.Name = "VgroupBox1";
-            this.VgroupBox1.Size = new System.Drawing.Size(248, 52);
-            this.VgroupBox1.TabIndex = 23;
-            this.VgroupBox1.TabStop = false;
-            this.VgroupBox1.Text = "Отображение точек:";
-            // 
             // MainForm
             // 
             this.AcceptButton = this.OK;
@@ -542,14 +542,14 @@
             this.ShowIcon = false;
             this.Text = "ПГМ-1";
             this.VisualizationPanel.ResumeLayout(false);
-            this.DataInputPanel0.ResumeLayout(false);
-            this.DataInputPanel0.PerformLayout();
             this.GrafPanel.ResumeLayout(false);
             this.GrafPanel.PerformLayout();
             this.VgroupBox2.ResumeLayout(false);
             this.VgroupBox2.PerformLayout();
             this.VgroupBox1.ResumeLayout(false);
             this.VgroupBox1.PerformLayout();
+            this.DataInputPanel0.ResumeLayout(false);
+            this.DataInputPanel0.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
