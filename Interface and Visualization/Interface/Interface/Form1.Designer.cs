@@ -33,38 +33,62 @@
             this.VisualizationPanel = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.toolTip2 = new System.Windows.Forms.ToolTip(this.components);
-            this.toolTip3 = new System.Windows.Forms.ToolTip(this.components);
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.DataInputPanel0 = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.toolTip2 = new System.Windows.Forms.ToolTip(this.components);
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.rLabel = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
             this.mLabel = new System.Windows.Forms.Label();
             this.lyambdaLabel = new System.Windows.Forms.Label();
-            this.OK = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
+            this.toolTip3 = new System.Windows.Forms.ToolTip(this.components);
+            this.label6 = new System.Windows.Forms.Label();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.DataInputPanel0 = new System.Windows.Forms.Panel();
             this.textBox7 = new System.Windows.Forms.TextBox();
+            this.OK = new System.Windows.Forms.Button();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.Vbutton2 = new System.Windows.Forms.Button();
+            this.Vbutton1 = new System.Windows.Forms.Button();
+            this.GrafPanel = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.VradioButton1 = new System.Windows.Forms.RadioButton();
+            this.VradioButton2 = new System.Windows.Forms.RadioButton();
+            this.VradioButton3 = new System.Windows.Forms.RadioButton();
+            this.VgroupBox2 = new System.Windows.Forms.GroupBox();
+            this.VradioButton4 = new System.Windows.Forms.RadioButton();
+            this.VradioButton5 = new System.Windows.Forms.RadioButton();
+            this.VgroupBox1 = new System.Windows.Forms.GroupBox();
+            this.VisualizationPanel.SuspendLayout();
             this.DataInputPanel0.SuspendLayout();
+            this.GrafPanel.SuspendLayout();
+            this.VgroupBox2.SuspendLayout();
+            this.VgroupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // VisualizationPanel
             // 
             this.VisualizationPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.VisualizationPanel.Controls.Add(this.Vbutton2);
+            this.VisualizationPanel.Controls.Add(this.Vbutton1);
+            this.VisualizationPanel.Controls.Add(this.GrafPanel);
+            this.VisualizationPanel.Controls.Add(this.VgroupBox2);
+            this.VisualizationPanel.Controls.Add(this.VgroupBox1);
             this.VisualizationPanel.Location = new System.Drawing.Point(8, 243);
             this.VisualizationPanel.Name = "VisualizationPanel";
-            this.VisualizationPanel.Size = new System.Drawing.Size(568, 397);
+            this.VisualizationPanel.Size = new System.Drawing.Size(567, 400);
             this.VisualizationPanel.TabIndex = 0;
+            this.VisualizationPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.VisualizationPanel_Paint);
             // 
             // label2
             // 
@@ -81,88 +105,6 @@
             this.toolTip1.ToolTipTitle = "Точность";
             this.toolTip1.Popup += new System.Windows.Forms.PopupEventHandler(this.toolTip1_Popup);
             // 
-            // toolTip2
-            // 
-            this.toolTip2.ToolTipTitle = "Максимальное колличество итераций";
-            // 
-            // toolTip3
-            // 
-            this.toolTip3.ToolTipTitle = "Отрезок";
-            // 
-            // openFileDialog1
-            // 
-            this.openFileDialog1.FileName = "openFileDialog1";
-            // 
-            // DataInputPanel0
-            // 
-            this.DataInputPanel0.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.DataInputPanel0.Controls.Add(this.textBox7);
-            this.DataInputPanel0.Controls.Add(this.label9);
-            this.DataInputPanel0.Controls.Add(this.OK);
-            this.DataInputPanel0.Controls.Add(this.lyambdaLabel);
-            this.DataInputPanel0.Controls.Add(this.mLabel);
-            this.DataInputPanel0.Controls.Add(this.textBox6);
-            this.DataInputPanel0.Controls.Add(this.rLabel);
-            this.DataInputPanel0.Controls.Add(this.comboBox2);
-            this.DataInputPanel0.Controls.Add(this.label3);
-            this.DataInputPanel0.Controls.Add(this.textBox5);
-            this.DataInputPanel0.Controls.Add(this.label8);
-            this.DataInputPanel0.Controls.Add(this.textBox4);
-            this.DataInputPanel0.Controls.Add(this.label7);
-            this.DataInputPanel0.Controls.Add(this.textBox3);
-            this.DataInputPanel0.Controls.Add(this.label6);
-            this.DataInputPanel0.Controls.Add(this.textBox2);
-            this.DataInputPanel0.Controls.Add(this.label5);
-            this.DataInputPanel0.Location = new System.Drawing.Point(8, 12);
-            this.DataInputPanel0.Name = "DataInputPanel0";
-            this.DataInputPanel0.Size = new System.Drawing.Size(568, 201);
-            this.DataInputPanel0.TabIndex = 1;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.25F);
-            this.label5.Location = new System.Drawing.Point(14, 11);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(62, 26);
-            this.label5.TabIndex = 1;
-            this.label5.Text = "f(x) =";
-            // 
-            // textBox2
-            // 
-            this.textBox2.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.textBox2.Location = new System.Drawing.Point(82, 11);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(481, 29);
-            this.textBox2.TabIndex = 2;
-            this.textBox2.Text = "(x/4)*cos(x)";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.25F);
-            this.label6.Location = new System.Drawing.Point(3, 46);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(73, 26);
-            this.label6.TabIndex = 3;
-            this.label6.Text = "[a,b] =";
-            this.toolTip3.SetToolTip(this.label6, "Отрезок, в пределах которого\r\nбудет производиться поиск\r\nглобального минимума\r\nза" +
-        "данной функции.");
-            // 
-            // textBox3
-            // 
-            this.textBox3.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.textBox3.Location = new System.Drawing.Point(82, 46);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(162, 29);
-            this.textBox3.TabIndex = 4;
-            this.textBox3.Text = "[ 0, 30 ]";
-            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -175,17 +117,9 @@
             this.toolTip1.SetToolTip(this.label7, "Максимальная точность, с которой будет считаться \r\nглобальный минимум заданной фу" +
         "нкции.");
             // 
-            // textBox4
+            // toolTip2
             // 
-            this.textBox4.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.textBox4.Location = new System.Drawing.Point(82, 81);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(162, 29);
-            this.textBox4.TabIndex = 6;
-            this.textBox4.Text = "0.00001";
-            this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.toolTip2.ToolTipTitle = "Максимальное колличество итераций";
             // 
             // label8
             // 
@@ -200,44 +134,6 @@
         "ьного минимума.\r\n\r\n(Колличество точек, в которых будет\r\nпроверяться наличие глоб" +
         "ального минимума)");
             // 
-            // textBox5
-            // 
-            this.textBox5.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.textBox5.Location = new System.Drawing.Point(82, 116);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(162, 29);
-            this.textBox5.TabIndex = 8;
-            this.textBox5.Text = "1000";
-            this.textBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(250, 46);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(168, 16);
-            this.label3.TabIndex = 9;
-            this.label3.Text = "Выберете метод поиска:";
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.BackColor = System.Drawing.SystemColors.Window;
-            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "Алгоритм глобального поиска",
-            "Монотонный алгоритм глобального поиска",
-            "Метод Кушнера",
-            "Метод ломанных"});
-            this.comboBox2.Location = new System.Drawing.Point(250, 65);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(313, 21);
-            this.comboBox2.TabIndex = 10;
-            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
-            // 
             // rLabel
             // 
             this.rLabel.AutoSize = true;
@@ -250,18 +146,6 @@
             this.toolTip2.SetToolTip(this.rLabel, "Максимальное колличество итераций,\r\nкоторые выполнит программа при поиске\r\nглобал" +
         "ьного минимума.\r\n\r\n(Колличество точек, в которых будет\r\nпроверяться наличие глоб" +
         "ального минимума)");
-            // 
-            // textBox6
-            // 
-            this.textBox6.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.textBox6.Location = new System.Drawing.Point(306, 116);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(73, 29);
-            this.textBox6.TabIndex = 12;
-            this.textBox6.Text = "3";
-            this.textBox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // mLabel
             // 
@@ -290,17 +174,6 @@
         "ьного минимума.\r\n\r\n(Колличество точек, в которых будет\r\nпроверяться наличие глоб" +
         "ального минимума)");
             // 
-            // OK
-            // 
-            this.OK.BackColor = System.Drawing.SystemColors.Window;
-            this.OK.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.OK.Location = new System.Drawing.Point(39, 151);
-            this.OK.Name = "OK";
-            this.OK.Size = new System.Drawing.Size(100, 35);
-            this.OK.TabIndex = 15;
-            this.OK.Text = "Начать";
-            this.OK.UseVisualStyleBackColor = false;
-            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -314,6 +187,51 @@
         "ьного минимума.\r\n\r\n(Колличество точек, в которых будет\r\nпроверяться наличие глоб" +
         "ального минимума)");
             this.label9.Click += new System.EventHandler(this.label9_Click);
+            // 
+            // toolTip3
+            // 
+            this.toolTip3.ToolTipTitle = "Отрезок";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.25F);
+            this.label6.Location = new System.Drawing.Point(3, 46);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(73, 26);
+            this.label6.TabIndex = 3;
+            this.label6.Text = "[a,b] =";
+            this.toolTip3.SetToolTip(this.label6, "Отрезок, в пределах которого\r\nбудет производиться поиск\r\nглобального минимума\r\nза" +
+        "данной функции.");
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // DataInputPanel0
+            // 
+            this.DataInputPanel0.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.DataInputPanel0.Controls.Add(this.textBox7);
+            this.DataInputPanel0.Controls.Add(this.label9);
+            this.DataInputPanel0.Controls.Add(this.OK);
+            this.DataInputPanel0.Controls.Add(this.lyambdaLabel);
+            this.DataInputPanel0.Controls.Add(this.mLabel);
+            this.DataInputPanel0.Controls.Add(this.textBox6);
+            this.DataInputPanel0.Controls.Add(this.rLabel);
+            this.DataInputPanel0.Controls.Add(this.comboBox2);
+            this.DataInputPanel0.Controls.Add(this.label3);
+            this.DataInputPanel0.Controls.Add(this.textBox5);
+            this.DataInputPanel0.Controls.Add(this.label8);
+            this.DataInputPanel0.Controls.Add(this.textBox4);
+            this.DataInputPanel0.Controls.Add(this.label7);
+            this.DataInputPanel0.Controls.Add(this.textBox3);
+            this.DataInputPanel0.Controls.Add(this.label6);
+            this.DataInputPanel0.Controls.Add(this.textBox2);
+            this.DataInputPanel0.Controls.Add(this.label5);
+            this.DataInputPanel0.Location = new System.Drawing.Point(8, 12);
+            this.DataInputPanel0.Name = "DataInputPanel0";
+            this.DataInputPanel0.Size = new System.Drawing.Size(567, 201);
+            this.DataInputPanel0.TabIndex = 1;
             // 
             // textBox7
             // 
@@ -329,17 +247,282 @@
             this.textBox7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox7.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
             // 
+            // OK
+            // 
+            this.OK.BackColor = System.Drawing.SystemColors.Window;
+            this.OK.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.OK.Location = new System.Drawing.Point(39, 151);
+            this.OK.Name = "OK";
+            this.OK.Size = new System.Drawing.Size(100, 35);
+            this.OK.TabIndex = 15;
+            this.OK.Text = "Начать";
+            this.OK.UseVisualStyleBackColor = false;
+            // 
+            // textBox6
+            // 
+            this.textBox6.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.textBox6.Location = new System.Drawing.Point(306, 116);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(73, 29);
+            this.textBox6.TabIndex = 12;
+            this.textBox6.Text = "3";
+            this.textBox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.BackColor = System.Drawing.SystemColors.Window;
+            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "Алгоритм глобального поиска",
+            "Монотонный алгоритм глобального поиска",
+            "Метод Кушнера",
+            "Метод ломанных"});
+            this.comboBox2.Location = new System.Drawing.Point(250, 65);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(313, 21);
+            this.comboBox2.TabIndex = 10;
+            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label3.Location = new System.Drawing.Point(250, 46);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(168, 16);
+            this.label3.TabIndex = 9;
+            this.label3.Text = "Выберете метод поиска:";
+            // 
+            // textBox5
+            // 
+            this.textBox5.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.textBox5.Location = new System.Drawing.Point(82, 116);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(162, 29);
+            this.textBox5.TabIndex = 8;
+            this.textBox5.Text = "1000";
+            this.textBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox4
+            // 
+            this.textBox4.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.textBox4.Location = new System.Drawing.Point(82, 81);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(162, 29);
+            this.textBox4.TabIndex = 6;
+            this.textBox4.Text = "0.00001";
+            this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox3
+            // 
+            this.textBox3.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.textBox3.Location = new System.Drawing.Point(82, 46);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(162, 29);
+            this.textBox3.TabIndex = 4;
+            this.textBox3.Text = "[ 0, 30 ]";
+            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox2
+            // 
+            this.textBox2.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.textBox2.Location = new System.Drawing.Point(82, 11);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(481, 29);
+            this.textBox2.TabIndex = 2;
+            this.textBox2.Text = "(x/4)*cos(x)";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.25F);
+            this.label5.Location = new System.Drawing.Point(14, 11);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(62, 26);
+            this.label5.TabIndex = 1;
+            this.label5.Text = "f(x) =";
+            // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.SystemColors.Window;
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.Location = new System.Drawing.Point(475, 646);
+            this.button1.Location = new System.Drawing.Point(461, 657);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(100, 35);
             this.button1.TabIndex = 18;
             this.button1.Text = "Выход";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // Vbutton2
+            // 
+            this.Vbutton2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.Vbutton2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.Vbutton2.Location = new System.Drawing.Point(11, 364);
+            this.Vbutton2.Name = "Vbutton2";
+            this.Vbutton2.Size = new System.Drawing.Size(74, 23);
+            this.Vbutton2.TabIndex = 22;
+            this.Vbutton2.Text = "Очистить";
+            this.Vbutton2.UseVisualStyleBackColor = true;
+            this.Vbutton2.Click += new System.EventHandler(this.Vbutton2_Click_1);
+            // 
+            // Vbutton1
+            // 
+            this.Vbutton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.Vbutton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.Vbutton1.Location = new System.Drawing.Point(11, 335);
+            this.Vbutton1.Name = "Vbutton1";
+            this.Vbutton1.Size = new System.Drawing.Size(74, 23);
+            this.Vbutton1.TabIndex = 21;
+            this.Vbutton1.Text = "Начертить";
+            this.Vbutton1.UseVisualStyleBackColor = true;
+            this.Vbutton1.Click += new System.EventHandler(this.Vbutton1_Click_1);
+            // 
+            // GrafPanel
+            // 
+            this.GrafPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.GrafPanel.AutoScroll = true;
+            this.GrafPanel.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.GrafPanel.Controls.Add(this.label1);
+            this.GrafPanel.Controls.Add(this.label4);
+            this.GrafPanel.Controls.Add(this.label10);
+            this.GrafPanel.Controls.Add(this.label11);
+            this.GrafPanel.Location = new System.Drawing.Point(11, 11);
+            this.GrafPanel.Name = "GrafPanel";
+            this.GrafPanel.Size = new System.Drawing.Size(543, 318);
+            this.GrafPanel.TabIndex = 20;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(3, 12);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(0, 13);
+            this.label1.TabIndex = 3;
+            // 
+            // label4
+            // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(0, 280);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(0, 13);
+            this.label4.TabIndex = 2;
+            // 
+            // label10
+            // 
+            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(505, 302);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(0, 13);
+            this.label10.TabIndex = 1;
+            // 
+            // label11
+            // 
+            this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(25, 302);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(0, 13);
+            this.label11.TabIndex = 0;
+            // 
+            // VradioButton1
+            // 
+            this.VradioButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.VradioButton1.AutoSize = true;
+            this.VradioButton1.Checked = true;
+            this.VradioButton1.Location = new System.Drawing.Point(6, 29);
+            this.VradioButton1.Name = "VradioButton1";
+            this.VradioButton1.Size = new System.Drawing.Size(75, 17);
+            this.VradioButton1.TabIndex = 11;
+            this.VradioButton1.TabStop = true;
+            this.VradioButton1.Text = "Без точек";
+            this.VradioButton1.UseVisualStyleBackColor = true;
+            // 
+            // VradioButton2
+            // 
+            this.VradioButton2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.VradioButton2.AutoSize = true;
+            this.VradioButton2.Location = new System.Drawing.Point(87, 29);
+            this.VradioButton2.Name = "VradioButton2";
+            this.VradioButton2.Size = new System.Drawing.Size(85, 17);
+            this.VradioButton2.TabIndex = 12;
+            this.VradioButton2.Text = "На графике";
+            this.VradioButton2.UseVisualStyleBackColor = true;
+            // 
+            // VradioButton3
+            // 
+            this.VradioButton3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.VradioButton3.AutoSize = true;
+            this.VradioButton3.Location = new System.Drawing.Point(178, 29);
+            this.VradioButton3.Name = "VradioButton3";
+            this.VradioButton3.Size = new System.Drawing.Size(65, 17);
+            this.VradioButton3.TabIndex = 13;
+            this.VradioButton3.Text = "На осях";
+            this.VradioButton3.UseVisualStyleBackColor = true;
+            // 
+            // VgroupBox2
+            // 
+            this.VgroupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.VgroupBox2.Controls.Add(this.VradioButton4);
+            this.VgroupBox2.Controls.Add(this.VradioButton5);
+            this.VgroupBox2.Location = new System.Drawing.Point(345, 335);
+            this.VgroupBox2.Name = "VgroupBox2";
+            this.VgroupBox2.Size = new System.Drawing.Size(209, 52);
+            this.VgroupBox2.TabIndex = 24;
+            this.VgroupBox2.TabStop = false;
+            this.VgroupBox2.Text = "Тип осей координат:";
+            // 
+            // VradioButton4
+            // 
+            this.VradioButton4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.VradioButton4.AutoSize = true;
+            this.VradioButton4.Checked = true;
+            this.VradioButton4.Location = new System.Drawing.Point(7, 29);
+            this.VradioButton4.Name = "VradioButton4";
+            this.VradioButton4.Size = new System.Drawing.Size(101, 17);
+            this.VradioButton4.TabIndex = 15;
+            this.VradioButton4.TabStop = true;
+            this.VradioButton4.Text = "Динамические";
+            this.VradioButton4.UseVisualStyleBackColor = true;
+            // 
+            // VradioButton5
+            // 
+            this.VradioButton5.AutoSize = true;
+            this.VradioButton5.Location = new System.Drawing.Point(114, 29);
+            this.VradioButton5.Name = "VradioButton5";
+            this.VradioButton5.Size = new System.Drawing.Size(89, 17);
+            this.VradioButton5.TabIndex = 16;
+            this.VradioButton5.Text = "Статические";
+            this.VradioButton5.UseVisualStyleBackColor = true;
+            // 
+            // VgroupBox1
+            // 
+            this.VgroupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.VgroupBox1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.VgroupBox1.Controls.Add(this.VradioButton1);
+            this.VgroupBox1.Controls.Add(this.VradioButton2);
+            this.VgroupBox1.Controls.Add(this.VradioButton3);
+            this.VgroupBox1.Location = new System.Drawing.Point(91, 335);
+            this.VgroupBox1.Name = "VgroupBox1";
+            this.VgroupBox1.Size = new System.Drawing.Size(248, 52);
+            this.VgroupBox1.TabIndex = 23;
+            this.VgroupBox1.TabStop = false;
+            this.VgroupBox1.Text = "Отображение точек:";
             // 
             // MainForm
             // 
@@ -348,7 +531,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.ClientSize = new System.Drawing.Size(587, 693);
+            this.ClientSize = new System.Drawing.Size(587, 704);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.DataInputPanel0);
@@ -358,8 +541,15 @@
             this.Name = "MainForm";
             this.ShowIcon = false;
             this.Text = "ПГМ-1";
+            this.VisualizationPanel.ResumeLayout(false);
             this.DataInputPanel0.ResumeLayout(false);
             this.DataInputPanel0.PerformLayout();
+            this.GrafPanel.ResumeLayout(false);
+            this.GrafPanel.PerformLayout();
+            this.VgroupBox2.ResumeLayout(false);
+            this.VgroupBox2.PerformLayout();
+            this.VgroupBox1.ResumeLayout(false);
+            this.VgroupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -392,6 +582,20 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button Vbutton2;
+        private System.Windows.Forms.Button Vbutton1;
+        private System.Windows.Forms.Panel GrafPanel;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.GroupBox VgroupBox2;
+        private System.Windows.Forms.RadioButton VradioButton4;
+        private System.Windows.Forms.RadioButton VradioButton5;
+        private System.Windows.Forms.GroupBox VgroupBox1;
+        private System.Windows.Forms.RadioButton VradioButton1;
+        private System.Windows.Forms.RadioButton VradioButton2;
+        private System.Windows.Forms.RadioButton VradioButton3;
     }
 }
 
