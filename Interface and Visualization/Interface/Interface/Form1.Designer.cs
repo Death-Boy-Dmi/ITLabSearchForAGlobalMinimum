@@ -402,7 +402,7 @@
             this.textBox7.ReadOnly = true;
             this.textBox7.Size = new System.Drawing.Size(181, 29);
             this.textBox7.TabIndex = 17;
-            this.textBox7.Text = "[ 8.98901, -8.97829 ]";
+            this.textBox7.Text = "[ 21.7677, -5.30666 ]";
             this.textBox7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox7.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
             // 
@@ -426,7 +426,7 @@
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(73, 29);
             this.textBox6.TabIndex = 12;
-            this.textBox6.Text = "3";
+            this.textBox6.Text = "0.5";
             this.textBox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // comboBox2
